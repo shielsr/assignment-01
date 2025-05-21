@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>title</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        }
+
+    body {
+            background-color: rgb(214, 214, 248);
+            font-family: Verdana, Arial;
+            margin:0px;
+        }    
+    
+    header { grid-area:header; }
+    nav {    grid-area: nav; }
+    main { grid-area: main; }
+    footer { grid-area: footer; }
+
+    nav 
+        {
+            background-color: rgb(198, 198, 255);
+        }
+    
+    nav ul 
+        {
+            padding:0px;
+            list-style-type:none;
+            display:flex;
+            justify-content:space-around;
+        }
+
+
+    nav a
+        {
+            text-decoration:none;
+        }
+
+        
+    #wrapper
+        {   
+        height: 100vh; 
+        background-color: white;
+        margin-left:auto;
+        margin-right:auto;
+        display:grid;
+        grid-template-rows: 40px 56px auto 50px;
+        
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        }
+
+    header
+        {
+            padding:16px;
+        }
+    main
+        {
+        padding:16px 16px;
+        }
+
+    h1 
+        {
+            margin:0px;
+        }
+
+    .cardGroup
+        {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            gap: 16px;
+            
+        }
+
+    .card
+        {
+            padding: 16px;
+            border: 1px solid black;
+            flex: 1 1 200px;
+            border-radius: 8px;
+        }
+
+    footer
+        {
+            padding:16px;
+
+        }
+
+@media (min-width: 380px)
+	{
+      body
+      {
+        margin:0px 24px;
+        background-color:red;
+        max-width: 800px;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      #wrapper
+      {
+        margin:0px 24px;
+      }
+	}
+
+    </style>
+</head>
+<body>
+    <div></div>
+<div id="wrapper">
+    <header>Band Fansite</header>
+    <nav>
+        <ul id="navlinks">
+            <li><a href="example.com">Home</a></li>
+            <li>Group</li>
+            <li>Newsletter</li>
+            <li>Gigs</li>
+        </ul>
+    </nav>
+    <main id="content">
+        <h1>Welcome</h1>
+        <p>Hello world</p>
+
+    <div class="cardGroup">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>Lorem ipsum dolor sit amet.
+                <br>
+                asdfasd asd fasd lfkajs; dflkfds fsdsdf
+            </p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="card">
+            <h2>Card 4</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+    </div>
+    </main>
+    <footer>
+        (C) Rob Shiels
+    </footer>
+</div>
+</body>
+</html>
+
+

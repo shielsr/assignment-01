@@ -1,0 +1,239 @@
+/* Welcome to my CSS stylesheet for the Assignment */
+    * {
+        box-sizing: border-box;
+        }
+
+    .skip {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            background-color: #000066;
+            color:white;
+            }
+
+        .skip:focus {
+            position: absolute;
+            left:auto;
+            top:auto;
+            width: auto;
+            height: auto;
+            }
+    body {
+            background-color:#e6edf5;
+            font-family: "Verdana", "Arial", sans-serif;
+            font-size:16px;
+            margin:0px;
+        }    
+    
+    header { grid-area:header; }
+    nav {    grid-area: nav;
+            padding:0px;
+             }
+    main { grid-area: main; }
+    footer { grid-area: footer; }
+
+ /*  Nav link styling including states  */   
+    nav ul 
+        {
+            padding:0px;
+            margin:0px;
+            list-style-type:none;
+            display:flex;
+            justify-content:space-around;
+        }
+
+
+    nav a
+        {
+            display:block;
+            text-decoration:none;
+            padding: 16px 8px;
+            border-radius: 4px;
+        }
+
+    nav a:hover
+        {
+          background-color:orange;  
+        }
+
+    nav a:focus
+        {
+            outline: 2px solid black;
+          
+        }
+
+    nav a:active
+        {
+            background-color:blue;
+        }
+        
+    /* End nav link styling */
+   
+    #wrapper
+        {   
+        padding:16px;
+        min-height: 100vh; 
+        background-color: white;
+        margin-left:auto;
+        margin-right:auto;
+        display:grid;
+        grid-template-rows: 40px auto auto 50px;
+        background-color:white;
+        gap: 16px;
+        grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+        }
+
+    h1, h2
+        {
+            margin:0px;
+            font-family:"Georgia", serif;
+            font-weight: 600;
+        } 
+    h1    
+        {
+            font-size:26px;   
+        }
+
+    h2
+        {
+            font-size:20px;
+        }
+
+    h3  
+        {
+            font-size:18px;
+        }
+
+    .cardGroup
+        {
+          display:grid;
+          gap:16px;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+    .card
+        {
+            padding: 16px;
+            border: 1px solid #e2e2e2;  
+            border-radius: 8px;
+            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.062);
+        }
+
+    #content
+        {
+            display:flex;
+            flex-direction:column;
+            gap: 24px;
+        }
+
+/*  Table CSS start */
+    #tableSection
+        {   
+            display:flex;
+            flex-direction:column;
+            gap:24px;
+        }
+
+    table
+        {
+            margin: auto;
+            border: 1px solid #e2e2e2;  
+            border-radius: 8px;
+            width: 100%;
+            border-spacing: 1;
+        }
+
+    td, th
+        {
+            padding: 4px 8px;
+            text-align:left
+        }
+
+      thead tr:first-of-type {
+            background-color: #e6edf5;
+            color: black;
+        }
+
+        tbody tr th
+        {
+            width: 25%;
+        }
+
+    tbody tr:nth-of-type(even) 
+        {
+            background-color: #eaeaea;
+        }
+
+ /*  Table CSS end */
+
+
+/* Tablet breakpoint */
+@media (min-width: 450px)
+	{
+      body
+        {
+            margin:0px 24px;
+            max-width: 1140px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+      #wrapper
+        {
+            padding:0px 24px;
+
+        }
+
+        #content
+        {
+            gap: 32px;
+        }
+
+        .cardGroup
+        {
+          gap: 24px;
+         }
+
+	}
+
+/* Desktop breakpoint */
+
+@media (min-width: 840px)
+	{
+      body
+        {
+            margin:0px 24px;
+            max-width: 1140px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+      #wrapper
+        {
+            margin:0px 24px;
+            display:grid;
+            grid-template-rows: 40px auto 50px;
+            grid-template-columns: 140px auto;
+            background-color:white;
+            gap: 24px;
+            grid-template-areas:
+            "header header"
+            "nav main"
+            "footer footer";
+        }
+
+        nav ul
+            {
+                flex-direction:column;
+            } 
+
+    }
+
+	
