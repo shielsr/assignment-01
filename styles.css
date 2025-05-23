@@ -145,21 +145,13 @@
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
 
-    .card
-        {
-         /*   padding: 16px;
-            border: 1px solid #e2e2e2;    
-            border-radius: 8px;
-            box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.062);
-            */
-        }
 
             .photoCircle
         {
             max-width:140px;
             float:left;
-            padding-right:0px;
             border-radius:50%;
+            margin-right:16px;
             transition: background-color 0.5s linear,
                   border-radius 1s ease,
                   border 0.2s ease-out,
@@ -171,7 +163,7 @@
         .photoCircle:hover
         {
             box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-            border:4px solid rgb(170, 165, 165);
+            border:3px solid rgb(151, 151, 151);
         }
 
 
