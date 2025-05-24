@@ -24,8 +24,8 @@
             }
     body {
             background-color:#e6edf5;
-            font-family: "Verdana", "Arial", sans-serif;
-            font-size:16px;
+            font-family: "Calibri", "Arial", serif;
+            font-size:18px;
             margin:0px;
         }    
     
@@ -52,7 +52,8 @@
             display:block;
             text-decoration:none;
             padding: 16px 8px;
-            border-radius: 4px;
+            color:#000066;
+            border-bottom:1px solid rgb(174, 178, 231); 
             transition: background-color 0.4s ease-out,
                   border-radius 1s ease,
                   color 2s ease-in-out,
@@ -121,21 +122,22 @@
         {
             margin:0px;
             font-family:"Georgia", serif;
-            font-weight: 600;
+            font-weight: 500;
         } 
     h1    
         {
-            font-size:26px;   
+            font-size:28px;   
         }
 
     h2
         {
-            font-size:22px;
+            font-size:24px;
         }
 
     h3  
         {
-            font-size:18px;
+            font-size:20px;
+            font-weight:600;
         }
 
 
@@ -234,6 +236,7 @@
             display:flex;
             flex-direction:column;
             gap: 24px;
+            padding-top:16px;
         }
 
 /*  Table CSS start */
