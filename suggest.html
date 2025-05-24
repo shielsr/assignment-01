@@ -32,7 +32,52 @@
                 <p>Can you think of a band bigger than the Beatles? Let us know by filling out this form.</p>
                 <p>Note: Your suggestion won't appear instantly. We'll have to put your suggestion through some rigourous fact-checking first, but don't worry: It won't be long (yeah!).</p>
             </div>
-            <form>
+            <form method="get" action="https://www.httpbin.org/anything">
+                <!-- <form method="post" action="https://www.httpbin.org/anything"> -->
+                <h2>Contact Us</h2>
+                <fieldset>
+                    <legend>Your details</legend>
+                    <label>
+                    Your full name
+                    <input type="text" name="name">
+                    </label>
+                    <label>
+                    Your email address
+                    <input type="email" name="email">
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>Band details</legend>
+                <label>
+                Name of the band
+                <input type="text" name="bandName">
+                </label>
+                <label>
+                How many members are in the band?
+                <input type="number" name="favourite-digit" min="0" max="9" accesskey="x">
+                </label>
+                <label>
+                Band members' names and heights
+                <textarea name="message" rows="5"></textarea>
+                </label>
+                <label>
+                The date they peaked (in terms of average height)
+                    <input type="date" name="date-of-birth">
+                    </label>
+                </fieldset>
+                <fieldset>
+                <legend>Terms and conditions</legend>
+                <label>
+                    <input type="checkbox" name="chrome">
+                    I confirm that all this information is true.
+                </label>
+                <label>
+                    <input type="checkbox" name="firefox">
+                    I confirm that I am not a member of the aforementioned band.
+                </label>
+                </fieldset>
+                <button type="submit" class="buttonPrimary">Submit</button>
+                <button type="reset" class="buttonSecondary">Reset</button>
             </form>
         </div>
     </main>

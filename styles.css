@@ -53,7 +53,7 @@
             text-decoration:none;
             padding: 16px 8px;
             border-radius: 4px;
-            transition: background-color 0.5s ease-out,
+            transition: background-color 0.4s ease-out,
                   border-radius 1s ease,
                   color 2s ease-in-out,
                   font-size 3s ease-out;
@@ -61,18 +61,18 @@
 
     nav a:hover
         {
-          background-color:orange; 
-          
+          background-color:rgb(223, 225, 252); 
+          color:rgb(0, 0, 0);
         }
 
-     a:focus
+     a:focus, .buttonPrimary:focus, .buttonSecondary:focus
         {
             outline: 2px solid black;  
         }
 
     nav a:active
         {
-            background-color:blue;
+            background-color:rgb(182, 182, 248);
         }
         
     /* End nav link styling */
@@ -86,7 +86,7 @@
         margin-left:auto;
         margin-right:auto;
         display:grid;
-        grid-template-rows: 60px auto auto 50px;
+        grid-template-rows: 60px auto auto auto;
         background-color:white;
         gap: 16px;
         grid-template-areas:
@@ -117,7 +117,7 @@
         }
 
 
-    h1, h2
+    h1, h2, h3
         {
             margin:0px;
             font-family:"Georgia", serif;
@@ -130,12 +130,74 @@
 
     h2
         {
-            font-size:20px;
+            font-size:22px;
         }
 
     h3  
         {
             font-size:18px;
+        }
+
+
+    .buttonPrimary, .buttonSecondary
+        {
+            transition: background-color 0.2s ease-out,
+                box-shadow 0.5s ease-out,
+                color 0.3s ease-in-out;
+        }
+
+    .buttonPrimary
+        {
+            padding:16px 16px;
+            background-color: #000066;
+            color:white;
+            font-size:18px;
+            text-align:center;
+            border-radius:8px;
+            width:fit-content;
+            margin-left:auto;
+            margin-right:auto;
+            text-decoration:none;
+            border:0px;
+        }
+
+    .buttonPrimary:hover
+        {
+            background-color: #414188;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+    .buttonPrimary:active
+        {
+            background-color: #000066;
+            box-shadow: 0px;
+        }
+
+    .buttonSecondary
+        {
+            padding:16px 16px;
+            background-color: #c6c6fc;
+            color:rgb(0, 0, 0);
+            font-size:18px;
+            text-align:center;
+            border-radius:8px;
+            width:fit-content;
+            margin-left:auto;
+            margin-right:auto;
+            text-decoration:none;
+            border:0px;
+        }
+
+    .buttonSecondary:hover
+        {
+            background-color: #d2d2fd;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+    .buttonSecondary:active
+        {
+            background-color: #c6c6fc;
+            box-shadow: 0px;
         }
 
     .cardGroup
@@ -145,13 +207,13 @@
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
 
-
             .photoCircle
         {
             max-width:140px;
             float:left;
             border-radius:50%;
             margin-right:16px;
+            margin-bottom: 16px;
             transition: background-color 0.5s linear,
                   border-radius 1s ease,
                   border 0.2s ease-out,
@@ -215,6 +277,46 @@
  /*  Table CSS end */
 
 
+ /*  Form CSS start */
+
+   label 
+        {
+            padding: 10px;
+            display: block;
+        }
+
+    input, textarea
+        {
+            display:block;
+            margin-top:6px;
+        }
+
+    textarea
+        {
+            display:block;
+            margin-top:4px;
+            min-width:300px;
+        }
+
+    input[type="checkbox"]
+        {
+            display:inline;
+        }
+
+    fieldset
+        {
+            margin: 24px 0px;
+        }
+
+/* Form CSS ends */
+
+footer
+        {
+            border-top:1px solid rgb(133, 133, 133);
+            margin-top:40px;
+            padding:40px 0px;
+        }
+
 /* Tablet breakpoint */
 @media (min-width: 450px)
 	{
@@ -229,7 +331,7 @@
       #wrapper
         {
             padding:0px 24px;
-            grid-template-rows: 96px auto auto 50px;
+            grid-template-rows: 96px auto auto auto;
 
         }
 
@@ -275,7 +377,7 @@
         {
             margin:0px 24px;
             display:grid;
-            grid-template-rows: 160px auto 50px;
+            grid-template-rows: 160px auto auto;
             grid-template-columns: 140px auto;
             background-color:white;
             gap: 24px;
